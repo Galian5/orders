@@ -31,6 +31,11 @@ class OrdersController < ApplicationController
     render json: @products
   end
 
+  def display_users
+    @users = Communicator.users
+    render json: @users
+  end
+
   private
 
   def order_params
